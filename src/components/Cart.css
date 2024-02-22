@@ -1,0 +1,19 @@
+.cart-box {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    justify-content: space-evenly;
+  }
+  .cart-item{
+    display: block;
+    width: 200px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+  .cart-item img{
+    height: 100px;
+    width: 100px;
+  }
+  .table{
+    margin-bottom: 100px;
+  }
