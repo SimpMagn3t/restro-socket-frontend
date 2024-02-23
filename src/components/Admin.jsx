@@ -8,7 +8,7 @@ const Admin = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState('');
   // const socket = useMemo(() => io('http://localhost:5000'), []);
-  const socket = useMemo(() => io('https://c0495ef6-a5d8-41d3-85ba-accf5f84930c-00-3n2vz3gea7yxl.sisko.repl.co/'), []);
+  const socket = useMemo(() => io('https://restro.azurewebsites.net/'), []);
 
   useEffect(() => {
     socket.on('connect', () => {
@@ -19,7 +19,7 @@ const Admin = () => {
     const fetchOrders = async () => {
       try {
         // const ord = await axios.get('http://localhost:5000/admin');
-        const ord = await axios.get('https://c0495ef6-a5d8-41d3-85ba-accf5f84930c-00-3n2vz3gea7yxl.sisko.repl.co/admin');
+        const ord = await axios.get('https://restro.azurewebsites.net/admin');
         setOrders(ord.data);
       } catch (error) {
         console.log(error.message);

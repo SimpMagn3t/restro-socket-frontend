@@ -19,7 +19,7 @@ const Home = () => {
     const fetchData = async () => {
       try {
         // const response = await axios.get(`http://localhost:5000/user`);
-        const response = await axios.get(`https://c0495ef6-a5d8-41d3-85ba-accf5f84930c-00-3n2vz3gea7yxl.sisko.repl.co/user`);
+        const response = await axios.get(`https://restro.azurewebsites.net/user`);
         setMenu(response.data);
       } catch (error) {
         console.error(error.message);

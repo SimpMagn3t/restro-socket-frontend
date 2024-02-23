@@ -11,7 +11,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   const { cart, tableNumber } = useSelector((state) => state.allCart);
   // const socket = useMemo(() => io('http://localhost:5000'), []);
-  const socket = useMemo(() => io('https://c0495ef6-a5d8-41d3-85ba-accf5f84930c-00-3n2vz3gea7yxl.sisko.repl.co/'), []);
+  const socket = useMemo(() => io('https://restro.azurewebsites.net/'), []);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const Cart = () => {
     };
     try {
       // await axios.post('http://localhost:5000/user', order);
-      await axios.post('https://c0495ef6-a5d8-41d3-85ba-accf5f84930c-00-3n2vz3gea7yxl.sisko.repl.co/user', order);
+      await axios.post('https://restro.azurewebsites.net/user', order);
       socket.emit('newOrder', order);
       setOrderPlaced(true);
     } catch (error) {
